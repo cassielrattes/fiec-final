@@ -1,6 +1,7 @@
 {
   "name": "cgoweb",
   "version": "0.1.0",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -8,9 +9,12 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.1"
   },
   "scripts": {
+    "electron": "electron .",
+    "electron-packager": "electron-packager . --platform=win32 --arch=ia32 --overwrite --prune=true --ignore=output  --ignore=doc --ignore=essais  --ignore=packaging --ignore=/.vscode  --ignore=/.gitignore --icon=assets/images/favicon.ico --win32metadata.CompanyName='AlbuWeb' --win32metadata.ProductName='VisaChine' --win32metadata.FileDescription='VisaChine' --win32metadata.OriginalFilename='visachine.exe' --app-copyright='(C)2019 AlbuWeb'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -30,5 +34,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "electron": "^8.0.0",
+    "electron-packager": "^14.2.1"
   }
 }
