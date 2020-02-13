@@ -2,7 +2,10 @@ import React from "react";
 
 const Button = props => {
   return (
-    <button style={{ color: props.cor, backgroundColor: props.fundo }}>
+    <button
+      onClick={props.click}
+      style={{ color: props.cor, backgroundColor: props.fundo }}
+    >
       {props.children}
     </button>
   );
