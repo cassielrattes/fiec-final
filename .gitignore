@@ -4,7 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/fiec-final-win32-x64
 # testing
 /coverage
 
