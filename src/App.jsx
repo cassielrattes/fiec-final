@@ -4,6 +4,7 @@ import Header from "./layouts/Header";
 import Button from "./layouts/Button";
 import Main from "./layouts/Main";
 import Teste from "./containers/Teste";
+import Teste2 from "./containers/Teste2";
 
 const App = () => {
   return (
@@ -14,6 +15,8 @@ const App = () => {
       </Button>
       <Main />
       <Teste />
+
+      <Teste2 />
     </div>
   );
 };
