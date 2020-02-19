@@ -1,29 +1,31 @@
-import React, { Component } from "react";
-import Button from "../layouts/Button";
+import React, { Component } from 'react'
+import Button from '../layout/Button';
 
-export class Teste extends Component {
-  state = {
-    contador: 0
-  };
+class Teste extends Component {
+    state = {
+        contador: 0
+    }
 
-  incrementState = () => {
-    const contador = this.state.contador + 1;
-    this.setState({ contador });
-  };
+    incrementaEstado = () => {
+        const contador = this.state.contador + 1;
+        this.setState({contador});
+    }
 
-  render() {
-    return (
-      <div>
-        <Button click={this.incrementState}>
-          <h1>Botão</h1>
-        </Button>
-        <h1>{this.state.contador}</h1>
-        {/* <Button cor="black" fundo="red">
-          Contador
-        </Button> */}
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <Button click={this.incrementaEstado} >
+                    Incrementa Contador
+                </Button>
+                {this.state.contador}
+
+                {/* <Button cor="white" fundo="green" >
+                   Incrementa Contador
+                </Button> */}
+
+            </div>
+        )
+    }
 }
 
-export default Teste;
+export default Teste
