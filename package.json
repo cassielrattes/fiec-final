@@ -4,6 +4,18 @@
   "homepage": "./",
   "main": "main.js",
   "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "cross-env CI=true npm test --bail --findRelatedTests",
+      "git add"
+    ]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -39,7 +51,16 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^7.0.0",
     "electron": "^6.1.3",
-    "electron-packager": "^13.1.1"
+    "electron-packager": "^13.1.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7"
   }
 }
